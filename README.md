@@ -47,3 +47,10 @@ validate it ([-90, 90]) but do not use it in the computation.
 Longitude uses the geographic convention: **positive = east**. This matches
 GeoJSON, JSR-107, and most modern geo libraries; it does *not* match the
 west-positive convention some astronomy textbooks use internally.
+
+## Performance
+
+The window keeps a bounded buffer, so `push` is constant time and memory does not
+grow with the length of the stream. `peak` and `trough` are linear in the window
+size, which is the trade that keeps `push` cheap.
+
