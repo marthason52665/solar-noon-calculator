@@ -1,6 +1,6 @@
 {
   "name": "solar-noon-calculator",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Computes the exact solar transit time for a given latitude, longitude, and date, expressing the result in a specified timezone.",
   "type": "module",
   "main": "src/index.js",
